@@ -16,7 +16,7 @@ public class MainPrincipal {
     public static void main (String oamg[]){
         ModelPrincipal model_Principal = new ModelPrincipal();
         ModelPeliculas model_Peliculas = new ModelPeliculas(model_Principal);
-        ModelClientes model_clientes = new ModelClientes(model_main);
+        ModelClientes model_clientes = new ModelClientes(model_Principal);
         
         ViewPrincipal view_Principal = new ViewPrincipal();
         ViewPeliculas view_Peliculas = new ViewPeliculas();
@@ -40,8 +40,8 @@ public class MainPrincipal {
         ControllerPeliculas controller_Peliculas = new ControllerPeliculas(models, views, controllers);
         controllers[1] = controller_Peliculas;
         
-        ControllerMain controller_main = new ControllerMain(models, views, controllers);
-        controllers[2] = controller_main;
+        ControllerPrincipal ControllerPrincipal = new ControllerPrincipal(models, views, controllers);
+        controllers[2] = ControllerPrincipal;
     }
 }
-}
+

@@ -41,6 +41,11 @@ public class ViewPrincipal extends javax.swing.JFrame {
         jMenu1_Peliculas.setText("Paneles");
 
         jmi_Peliculas.setText("Peliculas");
+        jmi_Peliculas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_PeliculasActionPerformed(evt);
+            }
+        });
         jMenu1_Peliculas.add(jmi_Peliculas);
 
         jmi_Cliente.setText("Cliente");
@@ -64,6 +69,10 @@ public class ViewPrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jmi_PeliculasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_PeliculasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmi_PeliculasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -105,7 +114,7 @@ public class ViewPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuBar jmb_barra_menu_paneles;
-    private javax.swing.JMenuItem jmi_Cliente;
-    private javax.swing.JMenuItem jmi_Peliculas;
+    public javax.swing.JMenuItem jmi_Cliente;
+    public javax.swing.JMenuItem jmi_Peliculas;
     // End of variables declaration//GEN-END:variables
 }

@@ -26,7 +26,7 @@ public class ModelPeliculas {
         this.model_Principal = model_Principal;
     }
      public void Actualizar_Datos(){
-        model_Principal.setSQL_String("SELECT * FROM Películas ORDER BY PelículaID ASC;");
+        model_Principal.setSQL_String("SELECT * FROM películas ORDER BY id_cliente ASC;");
         model_Principal.Ejecutar_Consulta();
         model_Principal.Mover_Primero();
         Asignar_Datos();
@@ -78,7 +78,7 @@ public class ModelPeliculas {
     
     public void Eliminar_Pelicula(){
         try{
-             model_Principal.setSQL_String("DELETE FROM Películas WHERE PelículaID = ? ;");
+             model_Principal.setSQL_String("DELETE FROM Películas WHERE id_cliente = ? ;");
              model_Principal.Preparar_Statement();
              model_Principal.getSQL_Prepared_Statement().setInt(1, Integer.parseInt(id_pelicula));
              model_Principal.Ejecutar_Actualizacion();
